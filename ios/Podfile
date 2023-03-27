@@ -42,13 +42,19 @@ target 'HeyThere' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  pod 'react-native-mapbox-gl', :path => '../node_modules/@react-native-mapbox-gl/maps'
 
   target 'HeyThereTests' do
     inherit! :complete
     # Pods for testing
   end
 
+  pre_install do |installer|
+    $RNMBGL.pre_install(installer)
+  end
+
   post_install do |installer|
+    $RNMBGL.post_install(installer)
     react_native_post_install(
       installer,
       # Set `mac_catalyst_enabled` to `true` in order to apply patches

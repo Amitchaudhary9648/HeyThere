@@ -9,6 +9,7 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+      <meta-data android:name="MAPBOX_ACCESS_TOKEN" android:value="pk.eyJ1IjoiYW1pdC1ybiIsImEiOiJjbGZxaDAwMTAweHFhNDBwaHFzYjZwbzByIn0.VC9l0Kkny28JhUJZhAlTtw" />
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
